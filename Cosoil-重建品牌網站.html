@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosoil - 專業再生品牌</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#0F3460',secondary:'#E6B325'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans TC', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(15, 52, 96, 0.9) 0%, rgba(15, 52, 96, 0.8) 40%, rgba(15, 52, 96, 0) 100%), url('https://public.readdy.ai/ai/img_res/6d1055754aa52cdd1e7625abfa8ff762.jpg');
+background-size: cover;
+background-position: right center;
+}
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(15, 52, 96, 0.1), 0 10px 10px -5px rgba(15, 52, 96, 0.04);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- 導航欄 -->
+<header class="bg-white shadow-sm fixed w-full top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-primary font-medium border-b-2 border-primary">首頁</a>
+<a href="#" class="text-gray-700 hover:text-primary transition-colors">產品</a>
+<a href="#" class="text-gray-700 hover:text-primary transition-colors">關於我們</a>
+<a href="#" class="text-gray-700 hover:text-primary transition-colors">聯絡我們</a>
+<div class="relative">
+<input type="text" placeholder="搜尋產品..." class="pl-10 pr-4 py-2 rounded bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/20 w-48 text-sm">
+<div class="absolute left-3 top-2 w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</nav>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-menu-line ri-xl"></i>
+</button>
+</div>
+</header>
+<!-- Hero 區域 -->
+<section class="hero-section pt-24 pb-16 md:pt-32 md:pb-24">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">專業引擎保護，卓越性能表現</h1>
+<p class="text-gray-100 text-lg mb-8">黑帝斯 HADES 系列機油，採用日本頂級技術，30年專業製造經驗，為您的愛車提供最完善的保護。</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary text-primary font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">探索產品</button>
+<button class="bg-white text-primary font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors">了解更多</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 品牌故事 -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/9732fb40791c86a41bd046e9313b0aa3.jpg" alt="Cosoil 製造工廠" class="rounded-lg shadow-lg w-full h-auto object-cover">
+</div>
+<div class="md:w-1/2">
+<h2 class="text-3xl font-bold text-primary mb-6">30年專業製造經驗</h2>
+<p class="text-gray-700 mb-4">Cosoil 自1995年成立以來，始終堅持以最高標準生產優質機油產品。我們與日本頂級技術團隊合作，融合東方精湛工藝與西方創新科技，打造出適合各種車輛的高性能機油。</p>
+<p class="text-gray-700 mb-6">我們的哈迪斯系列產品，採用獨特配方，有效延長引擎壽命，提升燃油效率，為您的愛車提供全方位保護。</p>
+<button class="bg-primary text-white font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">品牌故事</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 產品分類 -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-primary mb-12">產品分類</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- 汽車用油 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/d57dd256efe99d7d1c21b7c9c0a942b9.jpg" alt="汽車用油" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">汽車用油</h3>
+<p class="text-gray-600 mb-4">專為各類型汽車設計的高性能機油，提供卓越引擎保護與性能表現。</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-97 歐元 5W30 C3
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-88 ECO 5W30
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-62 賽車 5W40
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+查看全部
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 機車用油 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/794bcd03d1aad806607b2b6f319d0217.jpg" alt="機車用油" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">機車用油</h3>
+<p class="text-gray-600 mb-4">專為各種排量機車設計，提供卓越的高溫保護與加速性能。</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-07 5.5W40
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-35 10W40
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES EX-23 10W50
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+查看全部
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- 大型汽車用油 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/e33e13a04d99f0a67c487fd396753139.jpg" alt="大型汽車用油" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">專業汽車美容產品</h3>
+<p class="text-gray-600 mb-4">專為汽車外觀與內裝保養設計，提供卓越的清潔與保護效果。</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES 晶鑽鍍膜劑
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES 皮革保養乳
+</li>
+<li class="flex items-center gap-2 text-gray-700">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-check-line"></i>
+</div>
+黑帝斯 HADES 輪胎增黑劑
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+查看全部
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 技術優勢 -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-primary mb-12">黑帝斯 HADES 系列技術優勢</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-shield-check-line ri-2x"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold text-primary mb-2">卓越引擎保護</h3>
+<p class="text-gray-600">獨特配方有效減少引擎磨損，延長引擎壽命達 25%</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-temperature-hot-line ri-2x"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold text-primary mb-2">優異溫度穩定性</h3>
+<p class="text-gray-600">在極端溫度下仍能保持穩定性能，適應 -40°C 至 250°C</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-recycle-line ri-2x"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold text-primary mb-2">環保節能技術</h3>
+<p class="text-gray-600">降低燃油消耗，提升燃油效率達 5%，減少碳排放</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-award-line ri-2x"></i>
+</div>
+</div>
+<h3 class="text-lg font-bold text-primary mb-2">國際認證品質</h3>
+<p class="text-gray-600">通過 API、ACEA、JASO 等多項國際認證，品質有保障</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 熱門產品 -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-center mb-12">
+<h2 class="text-3xl font-bold text-primary">熱門產品</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:text-primary hover:border-primary transition-colors">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:text-primary hover:border-primary transition-colors">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- 產品1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/89fc83159a19cef4065d8fef895a1f4f.jpg" alt="哈迪斯 EX-97 歐元 5W30 C3" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded">熱銷商品</span>
+<div class="flex items-center gap-1 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+<span class="text-gray-500 text-xs ml-1">4.8</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">黑帝斯 HADES EX-97 歐元 5W30 C3</h3>
+<p class="text-gray-500 text-sm mb-3">適用於歐系高性能汽車</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">NT$ 1,280</span>
+<button class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors">
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- 產品2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/c05c74d955b15957c4529726eb74d0d1.jpg" alt="哈迪斯 EX-62 賽車 5W40" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-2 py-1 rounded">新品上市</span>
+<div class="flex items-center gap-1 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<span class="text-gray-500 text-xs ml-1">5.0</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">黑帝斯 HADES EX-62 賽車 5W40</h3>
+<p class="text-gray-500 text-sm mb-3">適用於高性能運動車款</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">NT$ 1,580</span>
+<button class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors">
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- 產品3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/33ab05a537d5fd91b47a176df30547d6.jpg" alt="哈迪斯 EX-35 10W40" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded">熱銷商品</span>
+<div class="flex items-center gap-1 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<span class="text-gray-500 text-xs ml-1">4.2</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">黑帝斯 HADES EX-35 10W40</h3>
+<p class="text-gray-500 text-sm mb-3">適用於各類型機車</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">NT$ 880</span>
+<button class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors">
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- 產品4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 product-card">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/bba7e26974ec3aa8654d0ff7735a2710.jpg" alt="哈迪斯 Hades CK-4 15W40" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded">熱銷商品</span>
+<div class="flex items-center gap-1 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+<span class="text-gray-500 text-xs ml-1">4.7</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">黑帝斯 HADES CK-4 15W40</h3>
+<p class="text-gray-500 text-sm mb-3">適用於重型柴油引擎</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">NT$ 2,180</span>
+<button class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors">
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 顧客評價 -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-primary mb-12">顧客評價</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700 mb-6">「使用黑帝斯 HADES EX-97 歐元 5W30 C3 後，我的 BMW 引擎運轉更加順暢，油耗也明顯改善。這款機油真的值得推薦給所有歐系車主！」</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/6fd94e17403d60a6b81561aed3a6a6e5.jpg" alt="陳志明" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium text-gray-900">陳志明</h4>
+<p class="text-gray-500 text-sm">BMW 車主</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-gray-700 mb-6">「我的重型機車使用黑帝斯 HADES EX-23 10W50 後，高速行駛時引擎溫度明顯降低，加速性能也提升不少。非常適合喜歡激烈騎乘的車友！」</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/4c2bb05eafc53984d734a343525e4bf1.jpg" alt="林雅婷" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium text-gray-900">林雅婷</h4>
+<p class="text-gray-500 text-sm">重機車主</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<p class="text-gray-700 mb-6">「我們運輸公司的卡車全面使用黑帝斯 HADES CK-4 系列機油後，引擎故障率下降了 30%，保養週期也延長了。對於長途運輸來說，這是最佳選擇！」</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/e3bb9e781fd5027a713c29b6d2184a9d.jpg" alt="王建國" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium text-gray-900">王建國</h4>
+<p class="text-gray-500 text-sm">運輸公司經理</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 品質認證 -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-3xl font-bold text-primary mb-6">國際品質認證</h2>
+<p class="text-gray-600 max-w-2xl mx-auto mb-12">黑帝斯 HADES 系列產品通過多項國際認證，品質有保障</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<div class="w-24 h-24 flex items-center justify-center">
+<div class="w-16 h-16 flex items-center justify-center text-primary">
+<i class="ri-award-fill ri-3x"></i>
+</div>
+</div>
+<div class="w-24 h-24 flex items-center justify-center">
+<div class="w-16 h-16 flex items-center justify-center text-primary">
+<i class="ri-verified-badge-fill ri-3x"></i>
+</div>
+</div>
+<div class="w-24 h-24 flex items-center justify-center">
+<div class="w-16 h-16 flex items-center justify-center text-primary">
+<i class="ri-medal-fill ri-3x"></i>
+</div>
+</div>
+<div class="w-24 h-24 flex items-center justify-center">
+<div class="w-16 h-16 flex items-center justify-center text-primary">
+<i class="ri-shield-star-fill ri-3x"></i>
+</div>
+</div>
+<div class="w-24 h-24 flex items-center justify-center">
+<div class="w-16 h-16 flex items-center justify-center text-primary">
+<i class="ri-certified-fill ri-3x"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 訂閱區域 -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-white mb-4">訂閱最新產品資訊</h2>
+<p class="text-gray-200 mb-8">訂閱我們的電子報，獲取最新產品資訊、技術文章與優惠活動</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input type="email" placeholder="請輸入您的電子郵件" class="flex-1 px-4 py-3 rounded-button border-none text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary">
+<button type="submit" class="bg-secondary text-primary font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">立即訂閱</button>
+</form>
+</div>
+</div>
+</section>
+<!-- 頁尾 -->
+<footer class="bg-gray-900 text-gray-400 py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+<p class="mb-6">專業再生品牌，30年製造經驗，為您的愛車提供最完善的保護。</p>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-line-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-4">產品分類</h3>
+<ul class="space-y-2">
+<li><a href="#" class="hover:text-white transition-colors">汽車用油</a></li>
+<li><a href="#" class="hover:text-white transition-colors">機車用油</a></li>
+<li><a href="#" class="hover:text-white transition-colors">大型汽車用油</a></li>
+<li><a href="#" class="hover:text-white transition-colors">保養商品</a></li>
+<li><a href="#" class="hover:text-white transition-colors">美容商品</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-4">關於我們</h3>
+<ul class="space-y-2">
+<li><a href="#" class="hover:text-white transition-colors">品牌故事</a></li>
+<li><a href="#" class="hover:text-white transition-colors">技術優勢</a></li>
+<li><a href="#" class="hover:text-white transition-colors">品質認證</a></li>
+<li><a href="#" class="hover:text-white transition-colors">常見問題</a></li>
+<li><a href="#" class="hover:text-white transition-colors">經銷據點</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-4">聯絡我們</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1 text-gray-400">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>台北市信義區松仁路 100 號 8 樓</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1 text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span>02-2345-6789</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1 text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span>service@cosoil.com.tw</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1 text-gray-400">
+<i class="ri-time-line"></i>
+</div>
+<span>週一至週五 9:00-18:00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p>© 2025 Cosoil. 版權所有。</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#" class="hover:text-white transition-colors">隱私政策</a>
+<a href="#" class="hover:text-white transition-colors">使用條款</a>
+<a href="#" class="hover:text-white transition-colors">Cookie 政策</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- 回到頂部按鈕 -->
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-colors">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+</body>
+</html>
